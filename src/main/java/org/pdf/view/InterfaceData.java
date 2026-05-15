@@ -12,13 +12,15 @@ public class InterfaceData extends JPanel {
     private JButton jbExit;
     private JTextField jtFieldFile;
     private JPanel groupIntereces;
+    private JButton jbSettings;
          public InterfaceData(CardLayout control,JPanel groupIntereces){
              this.control=control;
              this.groupIntereces=groupIntereces;
              setBackground(Color.ORANGE);
              setLayout(new GridBagLayout());
              buttonLabelLogin();
-             //tableLogin();
+             tableLogin();
+             buttonExitSettings();
          }
          private void buttonLabelLogin(){
 
@@ -40,15 +42,9 @@ public class InterfaceData extends JPanel {
              gbc.fill=GridBagConstraints.HORIZONTAL;
 
              add(jtFieldFile,gbc);
-             tableLogin();
-             //boton exit
-             gbc.gridx=0;gbc.gridy=2;
-             gbc.weighty=0.0; //indica que no se estire a lo lato
-             gbc.fill=GridBagConstraints.NONE; //por defecto se estirará a lo hancho.y esto hara que no lo haga
-             jbExit = new JButton("Exit");
+             //tableLogin();
 
-             jbExit.addActionListener(e -> control.show(groupIntereces,"id_Login"));
-             add(jbExit,gbc);
+
          }
          public void tableLogin(){
              gbc.gridx=0;gbc.gridy=1;
@@ -65,6 +61,28 @@ public class InterfaceData extends JPanel {
              add(scrollTable,gbc);
 
          }
+
+         private void buttonExitSettings(){
+            gbc.insets = new Insets(10,10,10,10);
+            gbc.gridwidth=1;
+            //boton exit
+            gbc.gridx=0;gbc.gridy=2;
+            gbc.weighty=0.0; //indica que no se estire a lo lato
+            gbc.fill=GridBagConstraints.NONE; //por defecto se estirará a lo hancho.y esto hara que no lo haga
+            jbExit = new JButton("Exit");
+
+            jbExit.addActionListener(e -> control.show(groupIntereces,"id_Login"));
+            //gbc.fill=GridBagConstraints.NONE;
+            add(jbExit,gbc);
+
+            //boton Settings
+            gbc.gridx=1;gbc.gridy=2;gbc.weighty=0.0;
+            gbc.fill= GridBagConstraints.NONE;
+
+            jbSettings = new JButton("Settings");
+            add(jbSettings,gbc);
+         }
+
 
 
 }
