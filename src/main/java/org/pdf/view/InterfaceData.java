@@ -80,6 +80,7 @@ public class InterfaceData extends JPanel {
             gbc.fill= GridBagConstraints.NONE;
 
             jbSettings = new JButton("Settings");
+            jbSettings.addActionListener(e -> control.show(groupIntereces,"id_config"));
             add(jbSettings,gbc);
          }
 
