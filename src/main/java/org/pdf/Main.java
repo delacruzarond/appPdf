@@ -12,11 +12,11 @@ import java.util.Map;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-//        WindowStart windowStart = new WindowStart();
-//        windowStart.setVisible(true);
+        WindowStart windowStart = new WindowStart();
+        windowStart.setVisible(true);
 
-         ConfigJson iniciar = new ConfigJson();
-         iniciar.resetFactory();
-         iniciar.loadConfig();
+//         ConfigJson iniciar = new ConfigJson();
+//         iniciar.resetFactory();
+//         iniciar.loadConfig();
     };
     }

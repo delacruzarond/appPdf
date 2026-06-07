@@ -72,6 +72,7 @@ public class InterfaceData extends JPanel {
             jbExit = new JButton("Exit");
 
             jbExit.addActionListener(e -> control.show(groupIntereces,"id_Login"));
+
             //gbc.fill=GridBagConstraints.NONE;
             add(jbExit,gbc);
 
